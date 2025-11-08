@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundtrack of Now - Casting Call</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Chakra+Petch:wght@700&family=Bebas+Neue&display=swap');
+        
+        /* Custom styles for the 80s/90s rock/cyber glow */
+        .neon-glow {
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+            font-family: 'Monoton', cursive;
+        }
+
+        .title-font {
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        .cta-button {
+            transition: all 0.2s;
+            box-shadow: 0 4px #dc2626; /* Red shadow for depth */
+            position: relative;
+            top: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .cta-button:active {
+            box-shadow: 0 0px #dc2626; /* Shadow squashes on click */
+            top: 4px;
+        }
+
+        /* Background texture: Dark, grungy pattern, referencing the uploaded image */
+        body {
+            background-color: #111111; 
+            /* Referencing the uploaded image file by name */
+            background-image: url('soundtrackofnow.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps image fixed during scroll */
+        }
+
+        /* Styling for the main flyer-style card */
+        .flyer-card {
+            background-color: #0d0d0d;
+            border-style: dashed; /* Simulate rough edge */
+            border-width: 3px;
+            border-color: #e879f9; /* Electric pink border */
+            transform: rotate(-1deg); /* Slight rotation for the 'tacked-up' look */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px #e879f9;
+            position: relative; /* Needed for z-index */
+            z-index: 10; /* Ensures content is above background image */
+        }
+        /* Optional: Overlay to make text readable over background image */
+        .overlay-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+            z-index: 1; /* Below the content */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <!-- Optional: Background overlay for readability if using a busy background image --><div class="overlay-background"></div> 
+
+    <!-- Header Block --><header class="text-center mb-10 w-full max-w-4xl p-6 rounded-xl relative z-20">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl text-white neon-glow mb-4 tracking-wider uppercase">
+            SOUNDTRACK OF NOW
+        </h1>
+        <h2 class="text-xl md:text-3xl text-cyan-400 title-font italic tracking-widest mt-4">
+            A Documentary Film Project
+        </h2>
+    </header>
+
+    <!-- Main Content/Casting Call Flyer --><main class="w-full max-w-xl p-6 md:p-8 flyer-card">
+        
+        <!-- Casting Title Section --><div class="bg-pink-600 p-2 mb-6 transform skew-x-3">
+            <h3 class="text-center text-3xl md:text-4xl font-bold uppercase text-black title-font tracking-widest">
+                CASTING CALL: LOCAL MUSIC LEGENDS
+            </h3>
+        </div>
+
+        <!-- Consistent Casting Call Text --><div class="text-white title-font space-y-6 text-center text-lg">
+            
+            <p class="text-xl md:text-2xl font-bold text-yellow-400">
+                We're working on pre-production of a documentary about local legends from the late '80s and '90s music scene — musicians who carried the passion of their band days into the rest of their lives, building meaningful careers, families, and communities in unexpected ways off the stage.
+            </p>
+
+            <p class="text-sm md:text-base leading-relaxed text-gray-300">
+                We're looking for former musicians who played in local bands between **1987 and 1999** — the era of **big energy, basements, garages, house parties, local bars**, and that unforgettable spark of "we're really doing this."
+            </p>
+
+            <!-- CHECKLIST WE'RE LOOKING FOR --><div class="border-t border-b border-cyan-500 py-4 space-y-3">
+                <h4 class="text-2xl font-extrabold text-cyan-400 uppercase tracking-wider mb-3">IF THIS SOUNDS LIKE YOU:</h4>
+                <ul class="list-none text-left mx-auto max-w-lg space-y-3 text-base">
+                    <li class="flex items-start">
+                        <span class="text-pink-400 mr-2 text-xl leading-none font-bold">&#9733;</span>
+                        <span>Played in a local cover or original band during that time.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pink-400 mr-2 text-xl leading-none font-bold">&#9733;</span>
+                        <span>Found your life has grown in ways you didn't predict back then... maybe you're teaching high school chemistry, found your path as a hospice nurse, bought a small farm in rural Ohio, or find your days filled with hosting tea parties with your kids.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-pink-400 mr-2 text-xl leading-none font-bold">&#9733;</span>
+                        <span>Still carry that era's spirit with you, even though your definition of success evolved in different ways.</span>
+                    </li>
+                </ul>
+                <p class="pt-3 text-yellow-400 font-bold">We'd love to connect.</p>
+            </div>
+
+            <!-- THE STORY --><p class="text-lg leading-relaxed">
+                This film is a nostalgic celebration of how the same spark that electrified a garage at midnight can continue to shape a life in unexpected, meaningful ways.
+            </p>
+
+            <!-- NEXT STEP Call to Action --><button onclick="showMessageBox()" class="cta-button title-font mt-8 px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-extrabold text-xl md:text-2xl rounded-lg uppercase transition duration-150 ease-in-out">
+                DM US YOUR STORY
+            </button>
+        </div>
+
+    </main>
+    
+    <!-- Footer/Placeholder Credits --><footer class="mt-10 text-center text-sm text-gray-400 title-font relative z-20">
+        <p>A Collaborative Documentary Project. Seeking Real Stories. No Fake Gigs.</p>
+    </footer>
+
+    <!-- Custom Message Box for the Casting Call --><div id="messageBox" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-md border-4 border-cyan-500">
+            <h4 class="text-2xl font-bold text-cyan-400 mb-4 title-font">READY TO SHARE YOUR STORY?</h4>
+            <p class="text-white mb-6">
+                If this sounds like you (or someone you know), please DM with the following details:
+            </p>
+            <ul class="list-none text-yellow-400 text-sm mb-6 space-y-2 text-left">
+                <li><span class="font-bold mr-1">1.</span> The band and/ or type of band you played in and the year(s) and city/state/country you played in.</li>
+                <li><span class="font-bold mr-1">2.</span> Brief description on what your life looks like today / how it looks different than you thought it would.</li>
+                <li><span class="font-bold mr-1">3.</span> Anything you'd like to share about what the transition/evolution has meant for you.</li>
+            </ul>
+            <p class="text-white text-sm mb-6">Excited to hear your story. Thanks!</p>
+            <button onclick="hideMessageBox()" class="cta-button title-font px-6 py-2 bg-pink-600 hover:bg-pink-500 text-white font-bold rounded-lg uppercase tracking-wider">
+                ROGER THAT. EXIT.
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the custom message box
+        function showMessageBox() {
+            document.getElementById('messageBox').classList.remove('hidden');
+        }
+
+        // Function to hide the custom message box
+        function hideMessageBox() {
+            document.getElementById('messageBox').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
